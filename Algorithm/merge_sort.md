@@ -1,5 +1,5 @@
 # Merge Sort (합병 정렬)
-_John von Neumann_
+_존 폰 노이만(John von Neumann)_
 
 ### ✔ 요약
 > 정렬되지 않은 리스트를 각각 하나의 원소만 포함하는 n개의 부분리스트로 분할 후, 
@@ -47,7 +47,7 @@ _John von Neumann_
 : 비교 연산과 이동 연산이 수행되지 않는다.
 2. 합병단계  
 * 비교 횟수  
-![Merge Sort](images/mergesort.png)
+ ![Merge Sort](https://github.com/ChaerinYu/Today-I-Learned/blob/main/Algorithm/images/mergesort.png?raw=true)
 * 이동 횟수
   * 순환 호출의 깊이 (합병 단계의 수)  
     : k=log₂n 
@@ -59,7 +59,7 @@ _John von Neumann_
 <br/>
 <br/>
 
-![Merge Sort](images/mergesort2.png)
+![Merge Sort](https://github.com/ChaerinYu/Today-I-Learned/blob/main/Algorithm/images/mergesort2.png?raw=true)
 
 <br/>
 
