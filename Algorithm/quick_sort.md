@@ -46,7 +46,7 @@ _‘찰스 앤터니 리처드 호어(Charles Antony Richard Hoare)’_
 <br/>
 
 
-![Quick Sort](images/quicksort.png)
+![Quick Sort](https://github.com/ChaerinYu/Today-I-Learned/blob/main/Algorithm/images/quicksort.png?raw=true)
 
 
 ``` java
