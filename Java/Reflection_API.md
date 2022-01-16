@@ -11,6 +11,20 @@ public class Item {
   private Long id;
   private String name;
 
+  // Creating a public method with no arguments
+  public void method1() {
+    System.out.println("The string is " + name);
+  }
+
+  // Creating a public method with int as argument
+  public void method2(Integer n) {
+    System.out.println("The number is " + n);
+  }
+
+  // creating a private method
+  private void method3() {
+    System.out.println("Private method invoked");
+  }
 }
 ```
 
@@ -67,7 +81,7 @@ method = notifyAll
 Process finished with exit code 0
 
 ```
-Reflection API를 이용하면 접근 제한자 상관없이 런타임 메서드를 호출할 수 있다.
+Reflection API를 이용하면 접근 제한자 상관없이 메서드를 호출할 수 있다.
 
 ## 장점
 - 확장성 : 정규화된 이름을 사용해 외부 사용자 정의 클래스를 사용할 수 있다.
