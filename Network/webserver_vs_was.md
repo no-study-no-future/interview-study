@@ -16,9 +16,15 @@
       (하지만 보안이나 트래픽 문제로 사장된 구조)
 
 # WAS - Web Application Server
-* DB 조회나 다양한 로직 처리를 요구하는 동적 컨텐츠 제공하는 프로그램 (정적 컨텐츠도 당연 가능)  
+* DB 조회나 다양한 로직 처리를 요구하는 동적 컨텐츠 제공하는 프로그램 (정적 컨텐츠도 당연 가능)
   ex) Tomcat, JBoss, Jeus
-    * **동적 컨텐츠?** 요청 인자에 따라 바뀔 수 있는 컨텐츠
+    * **동적 컨텐츠?** 요청 인자에 따라 바뀔 수 있는 컨텐츠  
+* Web Server + Web Container
+    * Web Server: 정적 컨텐츠
+      * 요청을 받아 Container로 전송
+      * 결과값을 받아 클라이언트에게 전송
+    * Web Container: 비즈니스 로직이나 DB 조회같은 동적인 컨텐츠 제공
+      * JSP, Servlet 구동 환경 제공
 * application
   * 빌드나 컴파일된 파일(바이트코드나 기계어로 미리 생성되어 있는 상태 - ex) `.class`나 `.exe`)  
   👉 따라서 서버사이드 스크립트 언어(ASP 나 PHP)를 구동하는건 WAS가 아니라 WebServer다.
@@ -29,10 +35,13 @@
 >  * 동적 컨텐츠 요청 시, 다양한 로직처리를 통해 동적컨텐츠를 제공할 수 있다.
 
 
-<br/><br/>
+<br/>
 
 보통 실무에서는 보안/트래픽 문제로 Web Server - WAS - DB, 3 Tier 구조로 서버를 구성하고 있다.    
-(PHP의 경우, Apache/Nginx - PHP-FPM - DB, 3 Tier 구조로 구성이 된다고 한다.)  
+(PHP의 경우, Apache/Nginx - PHP-FPM - DB, 3 Tier 구조로 구성이 된다고 한다.)   
+
+### Web Service Architecture
+![WebServiceArchitecture](https://github.com/ChaerinYu/Today-I-Learned/blob/main/Network/images/web_service.png?raw=true)
 
 
 ## 왜 굳이 Web Server와 같이 사용할까? 🤔
@@ -47,7 +56,7 @@
       * `interval` (서버 확인 요청 보내는 주기 - default: 5 sec)
       * `fails` (n번 연속 실패시 비정상으로 인지하여 자동으로 차단 - default: 1)
       * `passes` (서버 다시 복구된 후 요청이 n번 연속 성공시 정상으로 인지 - default: 1) 
-3. 보안
+3. 보안 강화
    * 리버스 프록시를 통해 실제 서버를 외부에 노출하지 않을 수 있다.
      * **리버스 프록시?** 네트워크 서비스에 간접적으로 접속할 수 있게 해 주는 컴퓨터 시스템이나 응용 프로그램
    * WAS같은 경우 DB 접근 권한을 갖고 있을 수 있어서 위험할 수 있는데 리버스 프록시를 통해 방지할 수 있다.
