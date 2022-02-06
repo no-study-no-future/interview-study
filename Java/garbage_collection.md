@@ -18,18 +18,21 @@
 
 ## GC 대상?
 * 어떤 객체에 유효한 참조가 존재한다면 reachable, 그렇지 않다면 unreachable 이라고 한다.
+
+![GC_대상](https://github.com/ChaerinYu/Today-I-Learned/blob/main/Java/images/gc_object.png?raw=true)
+
 * GC Roots 될 수 있는 데이터들
     * stack 영역의 데이터들
         * 지역변수, 파라미터
-    * method 영역의 데이터들
+    * method 영역의 static 데이터들
     * JNI에 의해 생성된 객체들
-* Stack에 있는 객체에 참조를 받는 애들이나 method 영역에서 참조를 받는 객체나 또는 힙 영역 다른 객체에게 참조 받는 경우 reachable 하다고 한다.
+* 'Stack에 있는 객체에 참조'를 받거나 'method 영역에서 참조를 받는 객체'나 또는 'heap 영역 다른 객체에게 참조' 받는 경우 reachable 하다고 한다.
 * unreachable이 GC 수거 대상이다
 
 <br/>
 
 ## GC의 동작 알고리즘
-### Mark ans Sweep
+### Mark and Sweep
 * 기본적으로 이 알고리즘으로 작동한다.
 * mark
     * GC Root로 부터 모든 변수를 스캔하면서 각각 어떤 객체를 참조하고 있는지 찾아서 마킹한다.
@@ -75,7 +78,12 @@ static 변수와 상수 정보들이 저장되는 공간으로 흔히 메타데�
 
 <br/>
 
-### GC의 과정
+### GC의 과정  
+
+
+![GC_과정](https://github.com/ChaerinYu/Today-I-Learned/blob/main/Java/images/howtogc.png?raw=true)  
+
+
 1. 새로운 객체가 `Eden` 영역에 할당된다.
 2. `Eden`영역에서 할당될 공간이 없으면 `Minor GC` 발생한다. (Mark And Sweep)
     * GC에서 살아남은(`reachable`) 객체들은 `Survivor` 영역으로 이동한다.
