@@ -28,15 +28,16 @@
 - RuntimeException 클래스를 상속하지 않은 Exception 클래스
 - 예외를 처리하지 않으면 컴파일 에러가 발생
 - 따라서 예외를 처리하기 위해 try-catch 또는 throws를 통해 처리
-> FileNotFoundException, ClassNotFoundException  
+> FileNotFoundException, ClassNotFoundException, IOException, SqlException 등  
   
 ### Unchecked Exception
 - RuntimeException 클래스를 상속한 Exception 클래스
 - 예외를 처리하지 않아도 컴파일 에러가 발생 ❌
+- 발생하는 예외는 RuntimeException을 상속했기에 동일
   
 ### Runtime Exception이란
 - 실행 중에 발생하는 예외로, 시스템 환경적으로나 input값이 잘못된 경우, 혹은 의도적으로 프로그래머가 잡아내기 위한 조건 등에 부합될 때 발생
-> ArrayIndexOutofBoundsException, NullPointerException  
+> ArrayIndexOutofBoundsException, NullPointerException, IllegalArgumentException 등  
   
 ### 구분 기준(차이)
 - 예외를 확인할 수 있는 시점 구분
