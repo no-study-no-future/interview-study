@@ -167,7 +167,7 @@ A에서 B로 데이터를 보낼 때, 상위계층(application layer)에서 하�
 
 
 
-![TCP/IP MODEL](images/tcpipmodel.png)  
+![TCP/IP MODEL](https://github.com/ChaerinYu/Today-I-Learned/blob/main/Network/images/tcpipmodel.png?raw=true)  
 
 
 1. A에서 먼저 스위치로 데이터를 보낸다. 
