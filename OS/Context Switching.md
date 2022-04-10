@@ -46,9 +46,8 @@
 - **PC**(Process Counter) : 다음 실행할 명령어의 주소값
 - **SP**(Stack Pointer) : 스택에 데이터가 채워진 마지막 위치를 가리키는 레지스터
 - CPU Registers : accumulator, index register, stack pointers, general purpose registers
-> PC, SP 중요  
-![](Context%20Switching/1.png)
 ![PCB 구조](https://github.com/leeejuhyeong/images/blob/main/no-study-no-future/OS/PCB%E1%84%80%E1%85%AE%E1%84%8C%E1%85%A9.png?raw=true) 
+> PC, SP 중요  
 
 ## 문제점
 ### Cost 비용
