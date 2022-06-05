@@ -1,4 +1,4 @@
-# SSL과 TLS
+# SSL과 TLS 
 
 ## SSL (Secure Sockets Layer - 보안 소켓 레이어)
     컴퓨터 네트워크에서 통신 보안을 제공하기 위해 설계된 암호화 규약이다. 
